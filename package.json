@@ -11,5 +11,8 @@
     "url": "https://github.com/nicetwice17"
   },
   "author": "Kemal' Ismailov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.6"
+  }
 }
