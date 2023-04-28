@@ -1,10 +1,15 @@
 import { getArgs } from './helpers/args.js'
+import { getWeatherData } from './services/api.service.js'
 import { logger } from './services/logService.js'
-import { getKeyValue, saveKeyValue } from './services/storageService.js'
+import { saveKeyValue, TOKEN_DICTIONARY } from './services/storageService.js'
 
 const saveToken = async (token) => {
-    try {
-        await saveKeyValue('token', token)
+    if (!token.length) {
+        logger.error('Token not transferred')
+    }
+
+    try { 
+        await saveKeyValue(TOKEN_DICTIONARY.token, token)
         logger.success('Token saved')
     } catch (error) {
         logger.error(error.message)
@@ -30,6 +35,7 @@ const initCli = () => {
     }
 
     // Return weather
+    getWeatherData('moscow')
 }
 
 initCli()
