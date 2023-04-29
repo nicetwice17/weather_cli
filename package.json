@@ -1,16 +1,20 @@
 {
   "name": "npm_weather_cli",
   "version": "1.0.0",
-  "description": "npm weather_cli pet project",
+  "description": "CLI for getting weather",
   "main": "weather.js",
   "bin": {
     "weather": "weather.js"
   },
   "type": "module",
   "scripts": {
-    "start": "node weather.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "cli",
+    "weather"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/nicetwice17"
